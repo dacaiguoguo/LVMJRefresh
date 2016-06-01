@@ -40,7 +40,7 @@
 - (UIImageView *)activityImage
 {
     if (!_activityImage) {
-        UIImageView *activityImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"activityLvImage.png"]];
+        UIImageView *activityImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:MJRefreshSrcName(@"activityLvImage.png")]];
         CGRect rect = CGRectMake(activityImage.frame.origin.x, activityImage.frame.origin.y, 26, 26);
         activityImage.frame = rect;
         [self addSubview:_activityImage = activityImage];

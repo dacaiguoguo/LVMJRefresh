@@ -66,7 +66,7 @@
         [self addSubview:_markImageView = markImageView];
         
         UIImageView* iconMark = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width - 215)/2.0, 0, 215, 80)];
-        [iconMark setImage:[UIImage imageNamed:@"baseBackgroundImage.png"]];
+        [iconMark setImage:[UIImage imageNamed:MJRefreshSrcName(@"baseBackgroundImage.png")]];
         [markImageView addSubview:iconMark];
     }
     return _markImageView;

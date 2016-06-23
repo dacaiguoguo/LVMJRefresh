@@ -19,7 +19,7 @@
 #define MJColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 // 文字颜色
-#define MJRefreshLabelTextColor [UIColor redColor]
+#define MJRefreshLabelTextColor MJColor(102,102,102)
 
 // 字体大小
 #define MJRefreshLabelFont [UIFont fontWithName:@"Helvetica" size:14.0f]

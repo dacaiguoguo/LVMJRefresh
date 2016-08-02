@@ -23,6 +23,10 @@ typedef enum {
 @interface MJRefreshHeader : MJRefreshComponent
 /** 利用这个key来保存上次的刷新时间（不同界面的刷新控件应该用不同的dateKey，以区分不同界面的刷新时间） */
 @property (copy, nonatomic) NSString *dateKey;
+/** 下拉图片 */
+@property (weak, nonatomic) UIView *markImageView;
+/** 下拉图片高度（需自配下拉图片时使用） */
+@property (assign, nonatomic) float markImageHeight;
 
 /** 利用这个block来决定显示的更新时间 */
 @property (copy, nonatomic) NSString *(^updatedTimeTitle)(NSDate *updatedTime);

@@ -22,8 +22,6 @@
 /** 所有状态对应的文字 */
 @property (strong, nonatomic) NSMutableDictionary *stateTitles;
 
-@property (weak, nonatomic) UIView *markImageView;
-
 @end
 
 @implementation MJRefreshHeader
@@ -67,6 +65,7 @@
         
         UIImageView* iconMark = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width - 215)/2.0, 0, 215, 80)];
         [iconMark setImage:[UIImage imageNamed:MJRefreshSrcName(@"baseBackgroundImage.png")]];
+        iconMark.tag = 1745;
         [markImageView addSubview:iconMark];
     }
     return _markImageView;
@@ -132,7 +131,7 @@
         CGFloat updatedTimeW = stateW;
         self.updatedTimeLabel.frame = CGRectMake(0, updatedTimeY, updatedTimeW, updatedTimeH - 2);
     }
-    self.markImageView.frame = CGRectMake(0, -80, [UIScreen mainScreen].bounds.size.width, 80);
+    self.markImageView.frame = CGRectMake(0, -(self.markImageHeight > 0 ? self.markImageHeight : 80), [UIScreen mainScreen].bounds.size.width, (self.markImageHeight > 0 ? self.markImageHeight : 80));
 }
 
 #pragma mark - 私有方法
